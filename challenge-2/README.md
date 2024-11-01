@@ -16,7 +16,8 @@ Made by the collaboration between [OpenGuild Labs](https://openguild.wtf) and [D
 - [ ] If connected account is already set on-chain identity, show the identity information instead the form
 
 ## How to claim the bounty?
-✅ Show your work to the DevRel of OpenGuild and get the confirmation to claim the bounty.
+- ✅ Create a pull request to submit your work for this challenge to the repository.
+- ✅ Show your work to the DevRel of OpenGuild and get the confirmation to claim the bounty.
 
 ## Learn how to use Dedot to build an application
 
@@ -26,18 +27,28 @@ Made by the collaboration between [OpenGuild Labs](https://openguild.wtf) and [D
 - Install SubWallet Extension: https://www.subwallet.app/download.html
 - Create your first wallet
 - Enable Polkadot testnet: Rococo & Westend
+
+<div align="center">
+
 <p float="left">
 <img float="left" width="200" alt="Xnapper-2024-07-18-21 55 02" src="https://github.com/user-attachments/assets/df3625ec-2103-4b80-9e19-7fbd618da859">
 <img float="left" width="200" alt="Xnapper-2024-07-18-21 55 52" src="https://github.com/user-attachments/assets/9dc271e1-74f6-47c6-8f5c-595b6b9f578b">
 <img float="left" width="200" alt="Xnapper-2024-07-18-21 55 33" src="https://github.com/user-attachments/assets/4895a38f-cc19-4b1f-86b6-6681fea2a2dd">
 </p>
 
+</div>
+
 
 - Claim testnet token from faucet: https://faucet.polkadot.io/
+
+<div align="center">
+
 <p float="left">
 <img float="left" width="250" alt="Xnapper-2024-07-18-22 00 14" src="https://github.com/user-attachments/assets/97ce3d78-ac8d-48eb-819c-059d3a989721">
 <img float="left" width="350" alt="Xnapper-2024-07-18-22 01 16" src="https://github.com/user-attachments/assets/eb37ac35-a314-4733-97ac-614a1c47019d">
 </p>
+
+</div>
 
 ### 2. Install Node.js
 
