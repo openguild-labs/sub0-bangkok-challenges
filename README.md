@@ -60,11 +60,15 @@ git commit -m "Register for OpenGuild Sub0 Challenges"
 
 ### Challenge 1: Using `smoldot` light client to collect and process data
 
+```
 Goal: 🎯 Read the data from parachains using `smoldot` light client library and process to return deliverables.
+```
 
 ### Challenge 2: Set an on-chain identity from the client with Dedot
 
+```
 Goal: 🎯 Make a transaction to set on-chain identity for connected account
+```
 
 - Initialize DedotClient to connect to Westend People testnet ([WestendPeopleApi](https://github.com/dedotdev/chaintypes/blob/7baa48e8e8e3c8e2dce4ad9ece0a11b9ae98934a/packages/chaintypes/src/westendPeople/index.d.ts#L24))
 - Build a form to enter identity information: Display name, Email, Discord handle
@@ -74,4 +78,6 @@ Goal: 🎯 Make a transaction to set on-chain identity for connected account
 
 ### Challenge 3: Building a parachain from a solochain
 
+```
 Goal: 🎯 Receiving a solochain template, convert it into parachain.
+```
