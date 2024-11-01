@@ -46,17 +46,21 @@ git commit -m "Register for OpenGuild Sub0 Challenges"
 
 <img width="1166" alt="Screenshot 2024-04-19 at 16 23 45" src="https://github.com/openguild-labs/open-hack-rust-starter/assets/56880684/7554ca7d-da68-4a23-893a-4f2c11a78d37">
 
+<br/>
+
 <div align="center">
 
 ## DISCOVER THE LIST OF CHALLENGES 🏆
 
-| Challenge   | Description                                              | Bounty |
-| ----------- | -------------------------------------------------------- | ------ |
-| Challenge 1 | Using `smoldot` light client to collect and process data | $40    |
-| Challenge 2 | Set an on-chain identity from the client with Dedot      | $40    |
-| Challenge 3 | Building a parachain from a solochain                    | $60    |
+| Challenge | Description                                              | Action                          | Bounty |
+| --------- | -------------------------------------------------------- | ------------------------------- | ------ |
+| 1         | Using `smoldot` light client to collect and process data | [Take Challenge](./challenge-1) | $40    |
+| 2         | Set an on-chain identity from the client with Dedot      | [Take Challenge](./challenge-2) | $40    |
+| 3         | Building a parachain from a solochain                    | [Take Challenge](./challenge-3) | $60    |
 
 </div>
+
+<br/>
 
 ### Challenge 1: Using `smoldot` light client to collect and process data
 
@@ -70,10 +74,10 @@ Goal: 🎯 Read the data from parachains using `smoldot` light client library an
 Goal: 🎯 Make a transaction to set on-chain identity for connected account
 ```
 
-- Initialize DedotClient to connect to Westend People testnet ([WestendPeopleApi](https://github.com/dedotdev/chaintypes/blob/7baa48e8e8e3c8e2dce4ad9ece0a11b9ae98934a/packages/chaintypes/src/westendPeople/index.d.ts#L24))
-- Build a form to enter identity information: Display name, Email, Discord handle
-- Make a transaction to set on-chain identity for connected account (via [client.tx.identity.setIdentity](https://github.com/dedotdev/chaintypes/blob/7baa48e8e8e3c8e2dce4ad9ece0a11b9ae98934a/packages/chaintypes/src/westendPeople/tx.d.ts#L2283-L2295))
-- Fetch & render your on-chain identity (via [client.query.identity.identityOf](https://github.com/dedotdev/chaintypes/blob/7baa48e8e8e3c8e2dce4ad9ece0a11b9ae98934a/packages/chaintypes/src/westendPeople/query.d.ts#L1130-L1134))
+- Initialize DedotClient to connect to Westend People testnet ([WestendPeopleApi](https://github.com/dedotdev/chaintypes/blob/7baa48e8e8e3c8e2dce4ad9ece0a11b9ae98934a/packages/chaintypes/src/westendPeople/index.d.ts#L24)).
+- Build a form to enter identity information: Display name, Email, Discord handle.
+- Make a transaction to set on-chain identity for connected account (via [client.tx.identity.setIdentity](https://github.com/dedotdev/chaintypes/blob/7baa48e8e8e3c8e2dce4ad9ece0a11b9ae98934a/packages/chaintypes/src/westendPeople/tx.d.ts#L2283-L2295)).
+- Fetch & render your on-chain identity (via [client.query.identity.identityOf](https://github.com/dedotdev/chaintypes/blob/7baa48e8e8e3c8e2dce4ad9ece0a11b9ae98934a/packages/chaintypes/src/westendPeople/query.d.ts#L1130-L1134)).
 - If connected account is already set on-chain identity, show the identity information instead the form.
 
 ### Challenge 3: Building a parachain from a solochain
@@ -81,3 +85,12 @@ Goal: 🎯 Make a transaction to set on-chain identity for connected account
 ```
 Goal: 🎯 Receiving a solochain template, convert it into parachain.
 ```
+
+## 👉 Contribute to OpenGuild Community
+
+OpenGuild is a builder-driven community centered around Polkadot. OpenGuild is built by Web3 builders for Web3 builders. Our primary aim is to cater to developers seeking a comprehensive understanding of the Polkadot blockchain, providing curated, in-depth materials with a low-level approach.
+
+- **About us:** [Learn more about us](https://openguild.wtf/about)
+- **Website:** [OpenGuild Website](https://openguild.wtf/)
+- **Github:** [OpenGuild Labs](https://github.com/openguild-labs)
+- **Discord**: [Openguild Discord Channel](https://discord.gg/bcjMzxqtD7)
