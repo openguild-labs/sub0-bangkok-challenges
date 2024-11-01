@@ -1,8 +1,13 @@
 # Challenge 2: Set an on-chain identity from the client with Dedot   
 
+```
+Goal: 🎯 Make a transaction to set on-chain identity for connected account
+```
+
 ## Description
 Made by the collaboration between [OpenGuild Labs](https://openguild.wtf) and [Dedot](https://dedot.dev) to introduce to participants about building decentralized applications on Polkadot.
 
+[Learn about the on-chain identity on Polkadot](https://openguild.wtf/blog/polkadot/polkadot-opengov-introduction#:~:text=Setting%20Up%20a%20Verified%20On%2DChain%20Identity%20on%20PolkAssembly)
 
 - [ ] Initialize `DedotClient` to connect to Westend People testnet ([`WestendPeopleApi`](https://github.com/dedotdev/chaintypes/blob/7baa48e8e8e3c8e2dce4ad9ece0a11b9ae98934a/packages/chaintypes/src/westendPeople/index.d.ts#L24))
 - [ ] Build a form to enter identity information: Display name, Email, Discord handle
