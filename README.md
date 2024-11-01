@@ -1,5 +1,11 @@
 <div align="center">
 
+<div style="display:flex;">
+<img width="120px" src="https://github.com/user-attachments/assets/e30b44e6-4332-4c3e-905c-d14b2ccd27b2"/>
+<img width="120px" src="https://github.com/user-attachments/assets/cb125c85-5a38-4737-8c6b-313b0b5b2833"/>
+</div>
+
+
 # OpenGuild Sub0 Bangkok Challenges
 
 OpenGuild challenges made for the Sub0 Bangkok Hackathon
