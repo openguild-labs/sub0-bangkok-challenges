@@ -17,29 +17,33 @@ TLDR: If you are not familiar with Git & Github, follow these steps below to for
 
 - Step 3: `Clone` the forked repository to your local device using the below command
 
-```
-git clone https://github.com/openguild-labs/sub0-bangkok-challenges.git
+```sh
+git clone https://github.com/<your_github_username>/sub0-bangkok-challenges.git
 ```
 
 Replace the `[name-of-your-account]` with your Github username. For example, if my username is `chungquantin`, I would do the below command to clone the repository to my local device.
 
-```
-git clone https://github.com/chungquantin/open-hack-rust-starter.git
+```sh
+git clone https://github.com/chungquantin/sub0-bangkok-challenges.git
 ```
 
 - Step 4: Edit the `README.md` file to register for official participation
 
 Go to **Participant Registration** section and register to be the workshop participants. Add the below to the list, replace any placeholder with your personal information.
 
-```
-| 🦄    | Name | Github username | Your current occupation |
+````
+
+| 🦄 | Name | Github username | Your current occupation |
+
 ```
 
 - Step 5: `Commit` your code and push to the forked Github repository
 
 ```
+
 git add .
 git commit -m "Register for OpenGuild Sub0 Challenges"
+
 ```
 
 - Step 6: Create a `Pull Request` to merge your changes to this repository and name your PR as `Your name | Register for OpenGuild Sub0 Challenges`
@@ -75,3 +79,5 @@ Goal: 🎯 Make a transaction to set on-chain identity for connected account
 ### Challenge 3: Building a parachain from a solochain
 
 Goal: 🎯 Receiving a solochain template, convert it into parachain.
+```
+````
