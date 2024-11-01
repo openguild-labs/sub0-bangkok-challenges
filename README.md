@@ -6,7 +6,7 @@
 </div>
 
 
-# OpenGuild Sub0 Bangkok Challenges
+# OpenGuild Sub0 Reset Bangkok Challenges 🇹🇭
 
 OpenGuild challenges made for the Sub0 Bangkok Hackathon
 
