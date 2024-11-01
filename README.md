@@ -31,19 +31,15 @@ git clone https://github.com/chungquantin/sub0-bangkok-challenges.git
 
 Go to **Participant Registration** section and register to be the workshop participants. Add the below to the list, replace any placeholder with your personal information.
 
-````
-
+```
 | 🦄 | Name | Github username | Your current occupation |
-
 ```
 
 - Step 5: `Commit` your code and push to the forked Github repository
 
 ```
-
 git add .
 git commit -m "Register for OpenGuild Sub0 Challenges"
-
 ```
 
 - Step 6: Create a `Pull Request` to merge your changes to this repository and name your PR as `Your name | Register for OpenGuild Sub0 Challenges`
@@ -79,5 +75,7 @@ Goal: 🎯 Make a transaction to set on-chain identity for connected account
 ### Challenge 3: Building a parachain from a solochain
 
 Goal: 🎯 Receiving a solochain template, convert it into parachain.
+
 ```
-````
+
+```
