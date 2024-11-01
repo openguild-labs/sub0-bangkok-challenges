@@ -75,7 +75,3 @@ Goal: 🎯 Make a transaction to set on-chain identity for connected account
 ### Challenge 3: Building a parachain from a solochain
 
 Goal: 🎯 Receiving a solochain template, convert it into parachain.
-
-```
-
-```
