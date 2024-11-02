@@ -58,20 +58,20 @@ git commit -m "Register for OpenGuild Sub0 Challenges"
 
 ## DISCOVER THE LIST OF CHALLENGES 🏆
 
-| Challenge | Description                                              | Action                          | Bounty |
-| --------- | -------------------------------------------------------- | ------------------------------- | ------ |
-| 1         | Using `smoldot` light client to collect and process data | [Take Challenge](./challenge-1) | $40    |
-| 2         | Set an on-chain identity from the client with Dedot      | [Take Challenge](./challenge-2) | $40    |
-| 3         | Building a parachain from a solochain                    | [Take Challenge](./challenge-3) | $60    |
+| Challenge | Description                                                | Action                          | Bounty |
+| --------- | ---------------------------------------------------------- | ------------------------------- | ------ |
+| 1         | Using `subxt` and light client to collect and process data | [Take Challenge](./challenge-1) | $40    |
+| 2         | Set an on-chain identity from the client with Dedot        | [Take Challenge](./challenge-2) | $40    |
+| 3         | Building a parachain from a solochain                      | [Take Challenge](./challenge-3) | $60    |
 
 </div>
 
 <br/>
 
-### Challenge 1: Using `smoldot` light client to collect and process data
+### Challenge 1: Using `subxt` and light client to collect and process data
 
 ```
-Goal: 🎯 Read the data from parachains using `smoldot` light client library and process to return deliverables.
+Goal: 🎯 Read the data from parachains and relaychains using `subxt` and light client library and process to return deliverables.
 ```
 
 ### Challenge 2: Set an on-chain identity from the client with Dedot

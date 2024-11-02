@@ -9,11 +9,12 @@ Made by the collaboration between [OpenGuild Labs](https://openguild.wtf) and [D
 
 [Learn about the on-chain identity on Polkadot](https://openguild.wtf/blog/polkadot/polkadot-opengov-introduction#:~:text=Setting%20Up%20a%20Verified%20On%2DChain%20Identity%20on%20PolkAssembly)
 
-- [ ] Initialize `DedotClient` to connect to Westend People testnet ([`WestendPeopleApi`](https://github.com/dedotdev/chaintypes/blob/7baa48e8e8e3c8e2dce4ad9ece0a11b9ae98934a/packages/chaintypes/src/westendPeople/index.d.ts#L24))
-- [ ] Build a form to enter identity information: Display name, Email, Discord handle
-- [ ] Make a transaction to set on-chain identity for connected account (via [`client.tx.identity.setIdentity`](https://github.com/dedotdev/chaintypes/blob/7baa48e8e8e3c8e2dce4ad9ece0a11b9ae98934a/packages/chaintypes/src/westendPeople/tx.d.ts#L2283-L2295))
-- [ ] Fetch & render your on-chain identity (via [`client.query.identity.identityOf`](https://github.com/dedotdev/chaintypes/blob/7baa48e8e8e3c8e2dce4ad9ece0a11b9ae98934a/packages/chaintypes/src/westendPeople/query.d.ts#L1130-L1134))
-- [ ] If connected account is already set on-chain identity, show the identity information instead the form
+- [ ] `🍭 Easy` Initialize `DedotClient` to connect to Westend People testnet ([`WestendPeopleApi`](https://github.com/dedotdev/chaintypes/blob/7baa48e8e8e3c8e2dce4ad9ece0a11b9ae98934a/packages/chaintypes/src/westendPeople/index.d.ts#L24))
+- [ ] `🍫 Intermediate` Build a form to enter identity information: Display name, Email, Discord handle
+- [ ] `🍫 Advanced` Make a transaction to set on-chain identity for connected account (via [`client.tx.identity.setIdentity`](https://github.com/dedotdev/chaintypes/blob/7baa48e8e8e3c8e2dce4ad9ece0a11b9ae98934a/packages/chaintypes/src/westendPeople/tx.d.ts#L2283-L2295))
+- [ ] `🍫 Intermediate` Fetch & render your on-chain identity (via [`client.query.identity.identityOf`](https://github.com/dedotdev/chaintypes/blob/7baa48e8e8e3c8e2dce4ad9ece0a11b9ae98934a/packages/chaintypes/src/westendPeople/query.d.ts#L1130-L1134))
+- [ ] `🍫 Intermediate` If connected account is already set on-chain identity, show the identity information instead the form
+- [ ] `🔥 Advanced` Migrating to light client and install Substrate Connect to connect with your applicaiton.
 
 ## How to claim the bounty?
 - ✅ Create a pull request to submit your work for this challenge to the repository.
