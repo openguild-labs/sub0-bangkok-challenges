@@ -9,6 +9,7 @@ Made by the collaboration between [OpenGuild Labs](https://openguild.wtf) and [D
 
 [Learn about the on-chain identity on Polkadot](https://openguild.wtf/blog/polkadot/polkadot-opengov-introduction#:~:text=Setting%20Up%20a%20Verified%20On%2DChain%20Identity%20on%20PolkAssembly)
 
+- [ ] `🍭 Easy` Finish the tasks in *"Learn how to use Dedot to build an application"*.
 - [ ] `🍭 Easy` Initialize `DedotClient` to connect to Westend People testnet ([`WestendPeopleApi`](https://github.com/dedotdev/chaintypes/blob/7baa48e8e8e3c8e2dce4ad9ece0a11b9ae98934a/packages/chaintypes/src/westendPeople/index.d.ts#L24))
 - [ ] `🍫 Intermediate` Build a form to enter identity information: Display name, Email, Discord handle
 - [ ] `🍫 Advanced` Make a transaction to set on-chain identity for connected account (via [`client.tx.identity.setIdentity`](https://github.com/dedotdev/chaintypes/blob/7baa48e8e8e3c8e2dce4ad9ece0a11b9ae98934a/packages/chaintypes/src/westendPeople/tx.d.ts#L2283-L2295))
@@ -96,14 +97,14 @@ npm run dev
 
 ### 5. Start building the dapp
 
-- [ ] Connect to wallet
-- [ ] Show connected account (name & address)
-- [ ] Initialize `DedotClient` to connect to the network (Westend testnet)
-- [ ] Fetch & show balance for connected account
-- [ ] Build a form to transfer balance (destination address & amount to transfer)
-- [ ] Check transaction status (in-block & finalized)
-- [ ] Check transaction result (success or not)
-- [ ] Subscribe to balance changing
+- [ ] `🍭 Easy` Connect to wallet
+- [ ] `🍭 Easy` Show connected account (name & address)
+- [ ] `🍭 Easy` Initialize `DedotClient` to connect to the network (Westend testnet)
+- [ ] `🍭 Easy` Fetch & show balance for connected account
+- [ ] `🍭 Easy` Build a form to transfer balance (destination address & amount to transfer)
+- [ ] `🍭 Easy` Check transaction status (in-block & finalized)
+- [ ] `🍭 Easy` Check transaction result (success or not)
+- [ ] `🍭 Easy` Subscribe to balance changing
 
 ### 6. How to interact with the network via Dedot?
 
