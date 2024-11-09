@@ -37,7 +37,7 @@ git clone https://github.com/chungquantin/sub0-bangkok-challenges.git
 Go to **Participant Registration** section and register to be the workshop participants. Add the below to the list, replace any placeholder with your personal information.
 
 ```
-| 🦄 | Name | Github username | Your current occupation |
+| 👨‍🍳 | Kacper | cleanerzkp | Developer|
 ```
 
 - Step 5: `Commit` your code and push to the forked Github repository
