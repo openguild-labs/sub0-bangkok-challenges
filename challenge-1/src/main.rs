@@ -9,9 +9,6 @@ pub mod polkadot {}
 // Examples chain specs.
 const POLKADOT_SPEC: &str = include_str!("../artifacts/chain_specs/polkadot.json");
 const ASSET_HUB_SPEC: &str = include_str!("../artifacts/chain_specs/polkadot_asset_hub.json");
-// TODO: `🍭 Easy` Add chain specs to PASEO Relaychain.
-
-// TODO: `🍭 Easy` Add chain specs to PASEO Asset Hub Parachain and PASEO Coretime Parachain.
 
 #[tokio::main]
 async fn main() -> Result<(), Box<dyn std::error::Error>> {
