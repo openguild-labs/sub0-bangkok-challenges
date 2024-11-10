@@ -63,6 +63,11 @@ git commit -m "Register for OpenGuild Sub0 Challenges"
 | 2         | Set an on-chain identity from the client with Dedot        | [Take Challenge](./challenge-2) | $100    |
 | 3         | Building a parachain from a solochain                      | [Take Challenge](./challenge-3) | $100    |
 
+
+## PARTICIPANT REGISTRATION 🏆
+
+| 🦄 | Armielyn Obinguar | armlynobinguar | DevRel @Virtuals Protocol |
+
 </div>
 
 <br/>
