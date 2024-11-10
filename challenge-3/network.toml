@@ -12,7 +12,7 @@ validator = true
 [[parachains]]
 id = 2000
 # TODO: Update the node path when switching to parachain-node
-default_command = "./target/release/parachain-from-scratch-node"
+default_command = "./target/debug/parachain-template-node"
 
 [[parachains.collators]]
 name = "collator-01"
