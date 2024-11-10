@@ -65,9 +65,9 @@ async fn main() -> Result<(), Box<dyn std::error::Error>> {
             block_number
         );
 
-        init_logs(&log_data)?;
+        init_logs(&log_data,"block_log.txt")?;
 
-        // TODO: `🍫 Intermediate` Finding the chain with highest block number.
+
         highest_blocks
             .entry(chain)
             .and_modify(|highest| {
@@ -88,19 +88,59 @@ async fn main() -> Result<(), Box<dyn std::error::Error>> {
             .or_insert(block_number);
         println!("Current lowest blocks: {:?}", lowest_blocks);
 
-        // TODO: `🔥 Advanced` Processing extrinsics of each block and aggregate the number of transactions made based on the pallet name. Store the data in the log file named `pallets.txt`.
 
-        // TODO: `🔥 Advanced` Processing events emitted from each block and aggregate the number of events made based on the event name. Store the data in the log file named `events.txt`.
+        let extrinsics = block.extrinsics().await?;
+
+        for ext in extrinsics.iter() {
+            let idx = ext.index();
+            match (ext.pallet_name(), ext.variant_name(), ext.events().await) {
+                (Ok(pallet_name), Ok(pallet_function), Ok(events)) => {
+
+                    let log_data = format!(
+                        "Extrinsic ID: {}, Pallet Name: {}, Pallet Function: {}\n",
+                        idx, pallet_name, pallet_function
+                    );
+
+                    init_logs(&log_data,"pallets.txt")?;
+
+                    // Iterate over events associated with the extrinsic
+                    for evt in events.iter() {
+                        match evt {
+                            Ok(evt) => {
+                                let event_pallet_name = evt.pallet_name();
+                                let event_name = evt.variant_name();
+                                match evt.field_values() {
+                                    Ok(event_values) => {
+
+                                        let log_data = format!(
+                                            "Pallet: {}, Event: {}, Event Values: {:?}\n",
+                                            event_pallet_name, event_name, event_values
+                                        );
+
+                                        init_logs(&log_data,"events.txt")?;
+                                    }
+                                    Err(e) => eprintln!("Error getting field values for event: {:?}", e),
+                                }
+                            }
+                            Err(e) => eprintln!("Error processing event: {:?}", e),
+                        }
+                    }
+                }
+                (Err(e), _, _) | (_, Err(e), _) | (_, _, Err(e)) => {
+                    eprintln!("Error processing extrinsic data: {:?}", e);
+                }
+            }
+        }
     }
 
     Ok(())
 }
 
-fn init_logs(log_data:&str) -> Result<(), Box<dyn std::error::Error>> {
+fn init_logs(log_data:&str,file_name:&str) -> Result<(), Box<dyn std::error::Error>> {
     let mut log_file = OpenOptions::new()
         .create(true)
         .append(true)
-        .open("blocks_log.txt")?;
+        .open(file_name)?;
 
     log_file.write_all(log_data.as_bytes())?;
     Ok(())
