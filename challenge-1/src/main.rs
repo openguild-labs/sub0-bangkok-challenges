@@ -9,7 +9,6 @@ use subxt::{client::OnlineClient, lightclient::LightClient, PolkadotConfig};
 pub mod polkadot {}
 
 // Examples chain specs.
-
 const POLKADOT_SPEC: &str = include_str!("../artifacts/chain_specs/polkadot.json");
 const POLKADOT_ASSET_HUB_SPEC: &str =
     include_str!("../artifacts/chain_specs/polkadot_asset_hub.json");
