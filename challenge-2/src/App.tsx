@@ -1,26 +1,140 @@
+import { useEffect, useState } from 'react';
 import dedotLogo from './assets/dedot-dark-logo.png';
-import { Container, Flex, Heading } from '@chakra-ui/react';
+import { Container, Flex, Heading, Box, Button, Text, Input, FormControl, FormLabel, Spinner } from '@chakra-ui/react';
+import { web3Enable, web3Accounts } from '@polkadot/extension-dapp';
+import { ApiPromise, WsProvider } from '@polkadot/api';
 
 function App() {
-  // 1. Connect to SubWallet
-  // 2. Show connected account (name & address)
-  // 3. Initialize `DedotClient` to connect to the network (Westend testnet)
-  // 4. Fetch & show balance for connected account
-  // 5. Build a form to transfer balance (destination address & amount to transfer)
-  // 6. Check transaction status (in-block & finalized)
-  // 7. Check transaction result (success or not)
-  // 8. Subscribe to balance changing
+  const [account, setAccount] = useState<{ name: string; address: string } | null>(null);
+  const [api, setApi] = useState<ApiPromise | null>(null);
+  const [balance, setBalance] = useState<string | null>(null);
+  const [destination, setDestination] = useState('');
+  const [amount, setAmount] = useState<number | string>('');
+  const [status, setStatus] = useState<string | null>(null);
+  const [loading, setLoading] = useState(false);
+
+  const connectWallet = async () => {
+    const extensions = await web3Enable('DedotClient');
+    if (extensions.length === 0) {
+      alert('Please install SubWallet to continue.');
+      return;
+    }
+
+    const accounts = await web3Accounts();
+    if (accounts.length > 0) {
+      const { address, meta } = accounts[0];
+      setAccount({ address, name: meta.name || 'Unnamed Account' });
+    }
+  };
+
+  const connectToNetwork = async () => {
+    const provider = new WsProvider('wss://westend-rpc.polkadot.io');
+    const apiInstance = await ApiPromise.create({ provider });
+    setApi(apiInstance);
+  };
+
+  const fetchBalance = async () => {
+    if (api && account) {
+      const balance = await api.query.system.account(account.address);
+      setBalance(balance.toString());
+    }
+  };
+
+  const sendTransaction = async () => {
+    if (!api || !account) return;
+    setLoading(true);
+
+    try {
+      const transfer = api.tx.balances.transfer(destination, amount);
+      const unsub = await transfer.signAndSend(account.address, ({ status, dispatchError }) => {
+        if (status.isInBlock) {
+          setStatus('Transaction included in block');
+        } else if (status.isFinalized) {
+          setStatus('Transaction finalized');
+          unsub();
+        }
+
+        if (dispatchError) {
+          setStatus('Transaction failed');
+          console.error('Error:', dispatchError.toString());
+        }
+      });
+    } catch (error) {
+      setStatus('Transaction failed');
+      console.error('Transaction error:', error);
+    } finally {
+      setLoading(false);
+    }
+  };
+
+  useEffect(() => {
+    if (api && account) {
+      const unsub = api.query.system.account(account.address, (balance: any) => {
+        setBalance(balance.toString());
+      });
+    }
+  }, [api, account]);
+
+  useEffect(() => {
+    connectToNetwork();
+  }, []);
 
   return (
     <Container maxW='container.md' my={16}>
       <Flex justifyContent='center'>
-        <a href='https://dedot.dev' target='_blank'>
-          <img width='100' src={dedotLogo} className='logo' alt='Vite logo' />
+        <a href='https://dedot.dev' target='_blank' rel='noreferrer'>
+          <img width='100' src={dedotLogo} className='logo' alt='Dedot logo' />
         </a>
       </Flex>
       <Heading my={4} textAlign='center'>
         Open Hack Dedot
       </Heading>
+
+      {!account ? (
+        <Button onClick={connectWallet} colorScheme='blue' my={4}>
+          Connect SubWallet
+        </Button>
+      ) : (
+        <>
+          <Box my={4}>
+            <Text><strong>Connected Account:</strong> {account.name} ({account.address})</Text>
+            <Text><strong>Balance:</strong> {balance || 'Loading...'}</Text>
+          </Box>
+
+          <FormControl my={4}>
+            <FormLabel>Destination Address</FormLabel>
+            <Input
+              placeholder='Enter destination address'
+              value={destination}
+              onChange={(e) => setDestination(e.target.value)}
+            />
+          </FormControl>
+
+          <FormControl my={4}>
+            <FormLabel>Amount to Transfer</FormLabel>
+            <Input
+              placeholder='Enter amount to transfer'
+              value={amount}
+              onChange={(e) => setAmount(e.target.value)}
+            />
+          </FormControl>
+
+          <Button
+            onClick={sendTransaction}
+            colorScheme='teal'
+            my={4}
+            isLoading={loading}
+          >
+            Send Transaction
+          </Button>
+
+          {status && (
+            <Text color={status.includes('failed') ? 'red.500' : 'green.500'}>
+              {status}
+            </Text>
+          )}
+        </>
+      )}
     </Container>
   );
 }
