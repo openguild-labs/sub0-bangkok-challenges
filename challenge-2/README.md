@@ -77,7 +77,7 @@ npm -v # should print `10.7.0`
 
 - Clone the repo
 ```shell
-git clone https://github.com/{your-github-username}/openhack-dedot
+git clone https://github.com/phapdev/openhack-dedot
 ```
 E.g: `https://github.com/sinzii/openhack-dedot`
 
@@ -97,11 +97,11 @@ npm run dev
 
 ### 5. Start building the dapp
 
-- [ ] `🍭 Easy` Connect to wallet
-- [ ] `🍭 Easy` Show connected account (name & address)
-- [ ] `🍭 Easy` Initialize `DedotClient` to connect to the network (Westend testnet)
-- [ ] `🍭 Easy` Fetch & show balance for connected account
-- [ ] `🍭 Easy` Build a form to transfer balance (destination address & amount to transfer)
+- [] `🍭 Easy` Connect to wallet
+- [] `🍭 Easy` Show connected account (name & address)
+- [] `🍭 Easy` Initialize `DedotClient` to connect to the network (Westend testnet)
+- [] `🍭 Easy` Fetch & show balance for connected account
+- [] `🍭 Easy` Build a form to transfer balance (destination address & amount to transfer)
 - [ ] `🍭 Easy` Check transaction status (in-block & finalized)
 - [ ] `🍭 Easy` Check transaction result (success or not)
 - [ ] `🍭 Easy` Subscribe to balance changing

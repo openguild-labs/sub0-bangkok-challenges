@@ -1,7 +1,6 @@
 import React, { useState } from 'react';
 import { DedotClient } from 'dedot';
 import { InjectedAccount } from '@polkadot/extension-inject/types';
-import { formatBalance } from './utils';
 import { WESTEND } from './networks';
 
 interface TransferFormProps {
@@ -18,14 +17,14 @@ const TransferForm: React.FC<TransferFormProps> = ({ client, accounts, injected,
   const [destAddress, setDestAddress] = useState<string>('');
   const [amount, setAmount] = useState<number>(1);
 
+  /// 5. Build a form to transfer balance (destination address & amount to transfer)
   const handleTransfer = async () => {
     if (!client || !accounts || !injected) {
-      setError('Missing necessary information (client, account, or injected wallet)');
+      setError('Transfer failed. Please try again.');
       return;
     }
     setIsLoading(true);
     setError(null);
-
     try {
       const amountToTransfer: bigint = BigInt(amount) * BigInt(Math.pow(10, WESTEND.decimals));
 
@@ -66,7 +65,7 @@ const TransferForm: React.FC<TransferFormProps> = ({ client, accounts, injected,
       <h2 style={{ marginBottom: '35px', color: '#333', fontSize: '34px' }}>Transfer Funds</h2>
       <div style={{ width: '100%' }}>
         <label style={{ display: 'flex', flexDirection: 'column', marginBottom: '15px' }}>
-          <span style={{ marginBottom: '8px', fontWeight: 'bold' }}>Destination Address:</span>
+          <span style={{ marginBottom: '8px', fontWeight: 'bold' }}>Address:</span>
           <input
             style={{
               border: '1px solid #007bff',
@@ -80,7 +79,7 @@ const TransferForm: React.FC<TransferFormProps> = ({ client, accounts, injected,
             type='text'
             value={destAddress}
             onChange={(e) => setDestAddress(e.target.value)}
-            placeholder='Enter destination address'
+            placeholder='Enter address'
             onFocus={(e) => e.target.style.borderColor = '#0056b3'}
             onBlur={(e) => e.target.style.borderColor = '#007bff'}
           />
