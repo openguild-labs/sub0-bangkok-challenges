@@ -59,9 +59,9 @@ git commit -m "Register for OpenGuild Sub0 Challenges"
 
 | Challenge | Description                                                | Action                          | Bounty |
 | --------- | ---------------------------------------------------------- | ------------------------------- | ------ |
-| 1         | Using `subxt` and light client to collect and process data | [Take Challenge](./challenge-1) | $40    |
-| 2         | Set an on-chain identity from the client with Dedot        | [Take Challenge](./challenge-2) | $40    |
-| 3         | Building a parachain from a solochain                      | [Take Challenge](./challenge-3) | $60    |
+| 1         | Using `subxt` and light client to collect and process data | [Take Challenge](./challenge-1) | $100    |
+| 2         | Set an on-chain identity from the client with Dedot        | [Take Challenge](./challenge-2) | $100    |
+| 3         | Building a parachain from a solochain                      | [Take Challenge](./challenge-3) | $100    |
 
 </div>
 

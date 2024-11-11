@@ -6,10 +6,11 @@ Goal: 🎯 Read the data from parachains and relaychains using `subxt` and light
 
 ## Description
 
+- Get the chain spec here: https://github.com/sodazone/substrate-chain-specs
+- PASEO chain specs: https://github.com/paseo-network/paseo-chain-specs
+
 ### Initializing new chains tasks
 
-- [ ] `🍭 Easy` Add chain specs to PASEO Relaychain.
-- [ ] `🍭 Easy` Add chain specs to Pop Network Parachain and Coretime Parachain.
 - [ ] `🍭 Easy` Initialize RPCs to new relaychains and parachains.
 - [ ] `🍭 Easy` Create Subxt clients from newly added Smoldot backed RPC clients.
 - [ ] `🍭 Easy` Fetch blocks from new chains using the added APIs.
