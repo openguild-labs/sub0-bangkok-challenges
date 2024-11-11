@@ -23,13 +23,13 @@ TLDR: If you are not familiar with Git & Github, follow these steps below to for
 - Step 3: `Clone` the forked repository to your local device using the below command
 
 ```sh
-git clone https://github.com/<your_github_username>/sub0-bangkok-challenges.git
+git clone https://github.com/phapdev/sub0-bangkok-challenges.git
 ```
 
 Replace the `[name-of-your-account]` with your Github username. For example, if my username is `chungquantin`, I would do the below command to clone the repository to my local device.
 
 ```sh
-git clone https://github.com/chungquantin/sub0-bangkok-challenges.git
+git clone https://github.com/phapdev/sub0-bangkok-challenges.git
 ```
 
 - Step 4: Edit the `README.md` file to register for official participation
@@ -37,7 +37,7 @@ git clone https://github.com/chungquantin/sub0-bangkok-challenges.git
 Go to **Participant Registration** section and register to be the workshop participants. Add the below to the list, replace any placeholder with your personal information.
 
 ```
-| 🦄 | Name | Github username | Your current occupation |
+| 🦄 | Phap | phapdev | Student |
 ```
 
 - Step 5: `Commit` your code and push to the forked Github repository

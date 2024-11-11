@@ -1,5 +1,4 @@
 import { decodeAddress } from 'dedot/utils';
-
 /**
  * Format on=chain balance
  *
@@ -10,6 +9,9 @@ export const formatBalance = (balance: bigint, decimal: number = 12): string => 
   return (parseFloat(balance.toString()) / Math.pow(10, decimal)).toString();
 };
 
+export const parseAmount = (amount: number, decimals: number): bigint => {
+  return BigInt(amount) * BigInt(Math.pow(10, decimals));
+}; 
 /**
  * Validate a Polkadot address
  *
