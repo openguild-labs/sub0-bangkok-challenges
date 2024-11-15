@@ -11,6 +11,14 @@ OpenGuild challenges made for the Sub0 Bangkok Hackathon
 
 </div>
 
+## Participant Registration
+
+Add your information to the below list to officially participate in the workshop challenge (This is the first mission of the whole workshop)
+
+| Emoji | Name     | Github Username                                 | Occupations |
+| ----- | -------- | ----------------------------------------------- | ----------- |
+| 🦄    | Leo Pham | [HongThaiPham](https://github.com/HongThaiPham) | Developer   |
+
 ## (Optional) Setup environment and register for the challenges
 
 TLDR: If you are not familiar with Git & Github, follow these steps below to fork and setup your own repository.
@@ -59,9 +67,9 @@ git commit -m "Register for OpenGuild Sub0 Challenges"
 
 | Challenge | Description                                                | Action                          | Bounty |
 | --------- | ---------------------------------------------------------- | ------------------------------- | ------ |
-| 1         | Using `subxt` and light client to collect and process data | [Take Challenge](./challenge-1) | $100    |
-| 2         | Set an on-chain identity from the client with Dedot        | [Take Challenge](./challenge-2) | $100    |
-| 3         | Building a parachain from a solochain                      | [Take Challenge](./challenge-3) | $100    |
+| 1         | Using `subxt` and light client to collect and process data | [Take Challenge](./challenge-1) | $100   |
+| 2         | Set an on-chain identity from the client with Dedot        | [Take Challenge](./challenge-2) | $100   |
+| 3         | Building a parachain from a solochain                      | [Take Challenge](./challenge-3) | $100   |
 
 </div>
 
