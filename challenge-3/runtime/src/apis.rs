@@ -41,18 +41,18 @@ use sp_std::prelude::Vec;
 use sp_version::RuntimeVersion;
 
 // TODO: Remove when migrating to a parachain
-use crate::Grandpa;
+// use crate::Grandpa;
 
 // Local module imports
 use super::{
     AccountId,
     Balance,
     Block,
-    // ConsensusHook,
+    ConsensusHook,
     Executive,
     InherentDataExt,
     Nonce,
-    // ParachainSystem,
+    ParachainSystem,
     NumberFor,
     Runtime,
     RuntimeCall,
@@ -76,45 +76,45 @@ impl_runtime_apis! {
     }
 
     // TODO: Configure runtime API
-    // impl cumulus_primitives_aura::AuraUnincludedSegmentApi<Block> for Runtime {
-    //     fn can_build_upon(
-    //         included_hash: <Block as BlockT>::Hash,
-    //         slot: cumulus_primitives_aura::Slot
-    //     ) -> bool {
-    //         ConsensusHook::can_build_upon(included_hash, slot)
-    //     }
-    // }
-
-    // TODO: Rmeove when migrating the node
-    impl sp_consensus_grandpa::GrandpaApi<Block> for Runtime {
-        fn grandpa_authorities() -> sp_consensus_grandpa::AuthorityList {
-            Grandpa::grandpa_authorities()
-        }
-
-        fn current_set_id() -> sp_consensus_grandpa::SetId {
-            Grandpa::current_set_id()
-        }
-
-        fn submit_report_equivocation_unsigned_extrinsic(
-            _equivocation_proof: sp_consensus_grandpa::EquivocationProof<
-                <Block as BlockT>::Hash,
-                NumberFor<Block>,
-            >,
-            _key_owner_proof: sp_consensus_grandpa::OpaqueKeyOwnershipProof,
-        ) -> Option<()> {
-            None
-        }
-
-        fn generate_key_ownership_proof(
-            _set_id: sp_consensus_grandpa::SetId,
-            _authority_id: pallet_grandpa::AuthorityId,
-        ) -> Option<sp_consensus_grandpa::OpaqueKeyOwnershipProof> {
-            // NOTE: this is the only implementation possible since we've
-            // defined our key owner proof type as a bottom type (i.e. a type
-            // with no values).
-            None
+    impl cumulus_primitives_aura::AuraUnincludedSegmentApi<Block> for Runtime {
+        fn can_build_upon(
+            included_hash: <Block as BlockT>::Hash,
+            slot: cumulus_primitives_aura::Slot
+        ) -> bool {
+            ConsensusHook::can_build_upon(included_hash, slot)
         }
     }
+
+    // TODO: Rmeove when migrating the node
+    // impl sp_consensus_grandpa::GrandpaApi<Block> for Runtime {
+    //     fn grandpa_authorities() -> sp_consensus_grandpa::AuthorityList {
+    //         Grandpa::grandpa_authorities()
+    //     }
+
+    //     fn current_set_id() -> sp_consensus_grandpa::SetId {
+    //         Grandpa::current_set_id()
+    //     }
+
+    //     fn submit_report_equivocation_unsigned_extrinsic(
+    //         _equivocation_proof: sp_consensus_grandpa::EquivocationProof<
+    //             <Block as BlockT>::Hash,
+    //             NumberFor<Block>,
+    //         >,
+    //         _key_owner_proof: sp_consensus_grandpa::OpaqueKeyOwnershipProof,
+    //     ) -> Option<()> {
+    //         None
+    //     }
+
+    //     fn generate_key_ownership_proof(
+    //         _set_id: sp_consensus_grandpa::SetId,
+    //         _authority_id: pallet_grandpa::AuthorityId,
+    //     ) -> Option<sp_consensus_grandpa::OpaqueKeyOwnershipProof> {
+    //         // NOTE: this is the only implementation possible since we've
+    //         // defined our key owner proof type as a bottom type (i.e. a type
+    //         // with no values).
+    //         None
+    //     }
+    // }
 
     impl sp_api::Core<Block> for Runtime {
         fn version() -> RuntimeVersion {
@@ -244,11 +244,11 @@ impl_runtime_apis! {
     }
 
     // TODO: Configure runtime API
-    // impl cumulus_primitives_core::CollectCollationInfo<Block> for Runtime {
-    //     fn collect_collation_info(header: &<Block as BlockT>::Header) -> cumulus_primitives_core::CollationInfo {
-    //         ParachainSystem::collect_collation_info(header)
-    //     }
-    // }
+    impl cumulus_primitives_core::CollectCollationInfo<Block> for Runtime {
+        fn collect_collation_info(header: &<Block as BlockT>::Header) -> cumulus_primitives_core::CollationInfo {
+            ParachainSystem::collect_collation_info(header)
+        }
+    }
 
     #[cfg(feature = "try-runtime")]
     impl frame_try_runtime::TryRuntime<Block> for Runtime {

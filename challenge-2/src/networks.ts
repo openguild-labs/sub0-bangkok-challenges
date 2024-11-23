@@ -20,6 +20,6 @@ export const WESTEND: Network = {
 };
 
 export const WESTEND_PEOPLE: Network = {
-  endpoint: 'wss://people-westend-rpc.dwellir.com',
+  endpoint: 'wss://sys.ibp.network/people-westend',
   decimals: 12,
 };
